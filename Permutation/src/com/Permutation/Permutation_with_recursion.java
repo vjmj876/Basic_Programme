@@ -1,7 +1,9 @@
 package com.Permutation;
 
+import java.util.Scanner;
+
 public class Permutation_with_recursion {
-	
+	static int count = 1;
 	private static void swap(char[] ch, int i, int j)
 	{
 		char temp = ch[i];
@@ -11,8 +13,11 @@ public class Permutation_with_recursion {
 	
 	private static void permutations(char[] ch, int currentIndex)
 	{
+		
 		if (currentIndex == ch.length - 1) {
-			System.out.println(String.valueOf(ch));
+			
+			System.out.println(count+" "+String.valueOf(ch));
+			count++;
 		}
 
 		for (int i = currentIndex; i < ch.length; i++)
@@ -26,7 +31,9 @@ public class Permutation_with_recursion {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		String s = "ABC";
+		System.out.print("Enter the String");
+		Scanner sc = new Scanner(System.in);
+		String s = sc.next();
 		permutations(s.toCharArray(), 0);
 	}
 
