@@ -35,6 +35,7 @@ public class Permutation_with_recursion {
 		Scanner sc = new Scanner(System.in);
 		String s = sc.next();
 		permutations(s.toCharArray(), 0);
+		a
 	}
 
 }
